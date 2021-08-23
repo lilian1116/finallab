@@ -1,0 +1,321 @@
+/* Globals */
+body {
+  background-color: rgb(156, 139, 121);
+  font-family: 'Cabin', sans-serif;
+}
+
+.flex{
+  display:flex;
+}
+
+.grid1{
+  display:grid;
+  background-color: rgb(255, 255, 255);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.grid2{
+  display:grid;
+  margin: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid1 img{
+  height:80px;
+  width:80px;
+  padding:10px;
+}
+
+
+
+/* Header */
+.header-container{
+  background-color: #eef8f3;
+  flex-direction: row;
+  align-items:center;
+  justify-content: space-between;
+}
+
+.header-container a{
+  text-decoration: none;
+  color:black;
+  align-items:center;
+  align-content: center;
+  justify-content: center;
+}
+
+.header-left a{
+  margin-top: 10px;
+  padding:10px;
+}
+
+.header-right a{
+  padding:10px;
+}
+
+.header-container img{
+  height:100px;
+  padding:10px;
+}
+
+.headernav a:hover{
+  color: #1b1f23;
+  box-shadow: 0 0 5px #14a96d;
+  text-shadow: 0 0 2px #14a96d;
+}
+
+#Ordernav{
+  color:rgb(75, 105, 30)
+}
+#Ordernav:hover{
+  color:rgb(175, 241, 76)
+}
+
+#LOGO2{
+  height: 200px;
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  right: 0;
+  left:100;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 10%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.5s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+.overlay a:active, .overlay a:focus {
+  font-size: 40px;
+}
+
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+.mobilenav{
+  display:none;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media only screen and (max-width: 500px){
+.mobilenav{
+  display: block;
+  position: absolute;
+  top:30px;
+  right:30px;
+}
+
+  .header-left a{
+    display: none;
+  }
+  
+  .header-right a{
+    display: none;
+  }
+  
+  #signin{
+    padding:10px;
+    display:block;
+  }
+}
+
+
+/* SIGN UP POPUP */
+.Signupmodal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  flex-direction: column;
+  align-items: center;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.userinput{
+  flex-direction: column;
+}
+
+.userinput_item input{
+  margin: 10px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  height:20px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover{
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 500px){
+  .rover-hero-container2{
+    display: block;
+  }
+.rover-hero-container{
+  display: none;
+  }
+
+
+.typetoogle{
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .close {
+    max-width: 60%;
+  }
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+/*rover*/
+
+.rover-action-dash{
+  width:80px;
+  border:solid #14a96d;
+}
+
+.rover-action-quote-container{
+  position:relative;
+  color: white;
+  top:-40px;
+  left:40px;
+  font-size: 100px;
+  font-weight: bold;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-bottom:5px;
+  padding-left:30px;
+  padding-right:30px;
+  border:solid 2px rgb(216, 216, 216);
+}
+
+.rover-action-quote-container span{
+  font-size: 30px;
+  color: grey;
+}
+
+.rover-action-quote-container a{
+  text-decoration: none;
+  color:#14a96d;
+}
+.rover-action-quote-container a:hover{
+  text-decoration: none;
+  color:#10724b;
+}
+
+.rover-action-shot{
+  margin-left:auto ;
+  margin-right:auto ;
+  margin-top:100px;
+  background-size: 100%;
+  width:1200px;
+  height:1090px;
+  background-image: url("https://64.media.tumblr.com/c26f015ea9e8e1cd0c93a64deecd6544/tumblr_pca0tyQKmg1rxerqqo1_1280.jpg");
+}
+
+@media only screen and (max-width: 500px){
+  .rover-action-quote-container{
+    position:absolute;
+    top:59px;
+    left: 10px;
+    width:250px;
+    height:200px;
+}
+
+.rover-action-shot{
+  padding: 100px;
+  position: absolute;
+  left:40px;
+  background-repeat: no-repeat;
+  width:230px;
+  height:200px;
+  font-size: 30px;
+  margin:1px;
+
+  }
+  .rover-action-quote-container p{
+    font-size: 40px;
+  }
+  .rover-action-quote-container span{
+    font-size: 10px;
+  }
+}
+
+

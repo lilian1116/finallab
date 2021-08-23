@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="../css/SignUp.css" />   
+    <title>Document</title>
+</head>
+<body>
+       <!--Header-->
+       <header class="header-container flex">
+        <section class="header-left headernav flex">
+          <img class="header-image" src="img/LOGO1.png" alt="logo">
+        </section>
+        <section class="header-right-mobile">
+          </section>
+        <section class="header-right headernav flex">
+          <a class="header-link" id="Ordernav" href="Menu.html">Start Order</a>
+          <a class="header-link" href="index.html#">Home</a>
+          <a class="header-link SignUP" id="signin">Sign In</a>
+          <a class="header-link" href="SignUp.html">Sign Up</a>
+          <a class="header-link" href="Contact.html">Contact Us</a>
+        </section>
+  </div>
+  </header>
+  
+  
+  <!--*SignUp-->
+        <div id="SignUPid" class="Signupmodal">
+          <div class="modal-content flex">
+            <span class="close">X</span>
+            <p>Welcome Back! </p>
+            <div class="userinput flex">
+  
+              <div class="userinput_item flex">
+                <h6>Email :</h6>
+                <input></input>
+              </div>
+  
+              <div class="userinput_item flex">
+                <h6>Pass :</h6>
+                <input></input>
+              </div>
+              
+              </div>
+          </div>
+        </div>
+  
+  <!-- The overlay -->
+  <div id="myNav" class="overlay">
+  
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+    <!-- Overlay content -->
+    <div class="overlay-content">
+      <img id="LOGO2" src="img/LOGO2.png" alt="logo">
+      <a id="Ordernav" href="http://127.0.0.1:5501/Menu.html">Start Order</a>
+      <a href="http://127.0.0.1:5501/index.html#">Home</a>
+      <a class="SignUP" href="#">Sign Up</a>
+      <a href="http://127.0.0.1:5501/Contact.html">Contact Us</a>
+    </div>
+  
+  </div>
+  
+  <!-- Use any element to open/show the overlay navigation menu -->
+  <div class="mobilenav flex">
+  <span onclick="openNav()"><img src="img/hamburger.svg" alt="hamburger-icon"></span>
+  </div>   
+  
+    <div id="login-box">
+        <div class="left">
+          <h1>Sign up</h1>
+          
+          <input type="text" name="username" placeholder="Username" />
+          <input type="text" name="email" placeholder="E-mail" />
+          <input type="password" name="password" placeholder="Password" />
+          <input type="password" name="password2" placeholder="Retype password" />
+          
+          <input type="submit" name="signup_submit" value="Sign me up" />
+        </div>
+        
+        <div class="right">
+          <span class="loginwith">Sign in with<br />social network</span>
+          
+          <button class="social-signin facebook">Log in with facebook</button>
+          <button class="social-signin twitter">Log in with Twitter</button>
+          <button class="social-signin google">Log in with Google+</button>
+        </div>
+        <div class="or">OR</div>
+      </div>
+      <script src="js/main.js"></script>
+</body>
+</html>

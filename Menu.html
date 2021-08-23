@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CUPPA |Menu</title>
+         <meta name="description" content="sample site">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+            <link rel="stylesheet" href="../css/Menu.css" />
+        </head>
+        <body>
+               <!--Header-->
+               <header class="header-container flex">
+                <section class="header-left headernav flex">
+                  <img class="header-image" src="img/LOGO1.png" alt="logo">
+                </section>
+                <section class="header-right-mobile">
+                </section>
+              <section class="header-right headernav flex">
+                <a class="header-link" id="Ordernav" href="Menu.html">Start Order</a>
+                <a class="header-link" href="index.html#">Home</a>
+                <a class="header-link SignUP" id="signin">Sign In</a>
+                <a class="header-link" href="SignUp.html">Sign Up</a>
+                <a class="header-link" href="Contact.html">Contact Us</a>
+              </section>
+          </div>
+          </header>
+          
+          
+          <!--*SignUp-->
+                <div id="SignUPid" class="Signupmodal">
+                  <div class="modal-content flex">
+                    <span class="close">X</span>
+                    <p>Welcome Back! </p>
+                    <div class="userinput flex">
+          
+                      <div class="userinput_item flex">
+                        <h6>Email :</h6>
+                        <input></input>
+                      </div>
+          
+                      <div class="userinput_item flex">
+                        <h6>Pass :</h6>
+                        <input></input>
+                      </div>
+                      
+                      </div>
+                  </div>
+                </div>
+          
+          <!-- The overlay -->
+          <div id="myNav" class="overlay">
+          
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          
+            <!-- Overlay content -->
+            <div class="overlay-content">
+              <img id="LOGO2" src="img/LOGO2.png" alt="logo">
+              <a id="Ordernav" href="http://127.0.0.1:5501/Menu.html">Start Order</a>
+              <a href="http://127.0.0.1:5501/index.html#">Home</a>
+              <a class="SignUP" href="#">Sign Up</a>
+              <a href="http://127.0.0.1:5501/Contact.html">Contact Us</a>
+            </div>
+          
+          </div>
+          
+          <!-- Use any element to open/show the overlay navigation menu -->
+          <div class="mobilenav flex">
+          <span onclick="openNav()"><img src="img/hamburger.svg" alt="hamburger-icon"></span>
+          </div>   
+
+<div class="Menu_container grid1">
+    <div>
+        <section class="container content-section">
+            <h2 class="section-header">Coffee</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Classic Caramel latte</span>
+                    <img class="shop-item-image" src="img/Menuimg/caramellatte.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">RM2.00</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Dalgona Maiden</span>
+                    <img class="shop-item-image" src="img/Menuimg/DalgonaMaiden.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">RM3.00</span>
+                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Hot Chocolate</span>
+                    <img class="shop-item-image" src="img/Menuimg/HC.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">RM4.00</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Loca Mocha</span>
+                    <img class="shop-item-image" src="img/Menuimg/Loca Mocha.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">RM1.00</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">Tea</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Chamomille Rose</span>
+                    <img class="shop-item-image" src="img/Menuimg/TEA Chamomille Rose.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">RM1.00</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Earl Grey</span>
+                    <img class="shop-item-image" src="img/Menuimg/TEA EarlGrey.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">RM2.00</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+        <section class="container content-section cartfix">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+                </div>
+
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price"></span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+        </section>
+    </div>
+        <footer>
+        </footer>
+        <script src="js/Menu.js"></script>
+    </body>
+</html>

@@ -1,0 +1,501 @@
+/* Globals */
+body {
+  font-family: 'Cabin', sans-serif;
+}
+
+.flex{
+  display:flex;
+}
+
+/* Header */
+.header-container{
+  background-color: #eef8f3;
+  flex-direction: row;
+  align-items:center;
+  justify-content: space-between;
+}
+
+.header-container a{
+  text-decoration: none;
+  color:black;
+  align-items:center;
+  align-content: center;
+  justify-content: center;
+}
+
+.header-left a{
+  margin-top: 10px;
+  padding:10px;
+}
+
+.header-right a{
+  padding:10px;
+}
+
+.header-container img{
+  height:100px;
+  padding:10px;
+}
+
+.headernav a:hover{
+  color: #1b1f23;
+  box-shadow: 0 0 5px #14a96d;
+  text-shadow: 0 0 2px #14a96d;
+}
+
+#Ordernav{
+  color:rgb(75, 105, 30)
+}
+#Ordernav:hover{
+  color:rgb(175, 241, 76)
+}
+
+#LOGO2{
+  height: 200px;
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  right: 0;
+  left:100;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 10%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.5s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+.overlay a:active, .overlay a:focus {
+  font-size: 40px;
+}
+
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+.mobilenav{
+  display:none;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media only screen and (max-width: 500px){
+.mobilenav{
+  display: block;
+  position: absolute;
+  top:30px;
+  right:30px;
+}
+
+  .header-left a{
+    display: none;
+  }
+  
+  .header-right a{
+    display: none;
+  }
+  
+  #signin{
+    padding:10px;
+    display:block;
+  }
+}
+/* SIGN UP POPUP */
+.Signupmodal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  flex-direction: column;
+  align-items: center;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.userinput{
+  flex-direction: column;
+}
+
+.userinput_item input{
+  margin: 10px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  height:20px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover{
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 500px){
+  .rover-hero-container2{
+    display: block;
+  }
+.rover-hero-container{
+  display: none;
+  }
+
+
+.typetoogle{
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .close {
+    max-width: 60%;
+  }
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  cursor: pointer;
+}
+  
+/*COnTACTS*/
+.conatactus___container{
+    margin-top:0%;
+    margin-left:30%;
+    flex-direction: column;
+}
+
+.conatactus___container img{
+    height:40px;
+    width:40px;
+    padding:10px;
+    margin-top: 20px;
+    background-color:rgb(155, 135, 104);
+    border-radius: 20px;
+    border: none;
+    border-bottom: solid lightcoral;
+}
+
+.contact_text{
+    font-family:'Lato', sans-serif;
+    padding-left: 20px;
+}
+
+.messageus_____cont{
+    position: relative;
+    flex-direction: column;
+    padding:20px;
+    justify-content: center;
+}
+
+.messageus_____cont input{
+    border-radius: 10px;
+    width: 350px;
+    height: 30px;
+    border: none;
+    border-bottom: solid lightcoral;
+}
+
+.messageus_____cont textarea{
+    border-radius: 10px;
+    width: 350px;
+    height: 80px;
+    border: none;
+    border-bottom: solid lightcoral;
+}
+
+.contactitem_container{
+    animation: 1s entranceup;
+}
+
+.speechbubble__Cont{
+    animation: 1s entrancefade;
+    animation-delay: 4.5s;
+    animation-fill-mode: backwards;
+}
+
+
+@keyframes entranceup{
+    0% {
+        transform: translate(0px, 200px);
+        opacity:0%;
+    }
+    60% {
+        opacity:100%;
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+@keyframes entrancefade{
+    0% {
+        opacity:0%;
+    }
+    60% {
+        opacity:100%;
+    }
+    100% {
+    }
+}
+
+.fa-facebook{
+    animation: 1s entranceside;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+.fa-twitter{
+    animation: 1s entranceside;
+    animation-delay: 1.2s;
+    animation-fill-mode: backwards;
+}
+.fa-google{
+    animation: 1s entranceside;
+    animation-delay: 1.4s;
+    animation-fill-mode: backwards;
+}
+.fa-instagram{
+    animation: 1s entranceside;
+    animation-delay: 1.6s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes entranceside{
+    0% {
+        transform: translate(100px, 0px);
+        opacity:0%;
+    }
+    60% {
+        opacity:100%;
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+/*speechbubble*/
+.speechbubble__Cont img{
+    position: fixed;
+    bottom:100px;
+    right:200px;
+    z-index: 0;
+    height:500px;
+    width: 500px;
+}
+
+.speechbubble__Cont{
+    position: fixed;
+    bottom:250px;
+    right:200px;
+    z-index: 99;
+    height:400px;
+    width: 500px;
+}
+
+.cuitem{
+    font-family:'Lato', sans-serif;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cuitem button{
+    font-family:'Lato', sans-serif;
+    font-size: 15px;
+    color: white;
+    margin: 10px;;
+    height:40px;
+    width:200px;
+    border: none;
+    border-bottom: solid rgb(221, 107, 87);
+    border-radius: 10px;
+    background-color: rgb(155, 135, 104);
+}
+
+.cuitem button:hover{
+    border: none;
+    background-color: rgb(122, 106, 81);
+    cursor: pointer;
+}
+#cuitem1{
+    position: fixed;
+    bottom:300px;
+    right: 250px;
+    flex-direction: column;
+    padding:20px;
+    justify-content: center;
+}
+
+#cutitem3{
+    position: fixed;
+    bottom:300px;
+    right: 250px;
+    flex-direction: column;
+    padding:20px;
+    justify-content: center;
+    display:none;
+}
+
+#cutitem2{
+    display:none;
+}
+
+@media only screen and (max-width: 500px){
+.speechbubble__Cont{
+display:none;
+}
+.conatactus___container{
+    margin-top:10%;
+    margin-left:10%;
+    flex-direction: column;
+}
+
+
+}
+
+/*social media icons*/
+.socialmedia{
+    flex-direction: column;
+    align-items: center;
+    font-family: Lato;
+}
+.fa {
+    display: flex;
+    border-radius: 50px;
+    padding: 20px;
+    font-size: 30px;
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px 20px;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+
+  #close{
+      position:relative;
+      right:-450px;
+      top:-5px;
+      font-size:30px;
+      font-family: Lato;
+      height:50px;
+      width:50px;
+      border-radius: 50px;
+      background-color: rgb(160, 76, 62);
+      border:solid 2px white;
+      color:white;
+  }
+  #close:hover{
+    background-color: rgb(240, 92, 66);
+  }
+
+  #girl{
+      position:fixed;
+      right:100px;
+      bottom: -40px;
+      height:200px;
+      width:200px;
+
+      animation: 3s girl;
+      animation-delay: 3s;
+      animation-fill-mode: backwards;
+  }
+
+  @keyframes girl{
+    0% {
+        transform: translate(0px, 100px);
+
+    }
+    
+    20% {
+        transform: translate(0px, 120px);
+    }
+
+    50% {
+        transform: translate(0px, 0px);
+    }
+}
